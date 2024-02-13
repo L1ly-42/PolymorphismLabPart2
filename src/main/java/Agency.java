@@ -24,10 +24,15 @@ public class Agency {
         this.properties.add(property);
     }
 
-    public void removeProperty(Building building) {
-        this.properties.remove(building);
+    public void removeProperty(ISell property) {
+        this.properties.remove(property);
     }
 
+    public double calculateTax(ISell singleProperty, double cost) {
+        double profitPerMonth = singleProperty.calculateProfit(cost);
+        double yearProfit = profitPerMonth * 12;
+        return yearProfit * 0.25;
+    }
     public double calculateTax(ArrayList<ISell> allProperties, double yearlyCost) {
         double profitPerMonth = 0;
         double costPerMonth = yearlyCost/12;
@@ -39,9 +44,4 @@ public class Agency {
 
     }
 
-    public double calculateTax(ISell singleProperty, double cost) {
-        double profitPerMonth = singleProperty.calculateProfit(cost);
-        double yearProfit = profitPerMonth * 12;
-        return yearProfit * 0.25;
-    }
 }
