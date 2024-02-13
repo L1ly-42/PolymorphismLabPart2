@@ -44,8 +44,12 @@ public class ResidentialTest {
     public void canSetNumberOfComplaints() {
         cottage.setNumberOfComplaints(3);
         assertThat(cottage.getNumberOfComplaints()).isEqualTo(3);
+    }
 
-
+    @Test
+    public void canCalculateProfit(){
+        double profit = cottage.calculateProfit(200);
+        assertThat(profit).isEqualTo(200);
     }
 }
 

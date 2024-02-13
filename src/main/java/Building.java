@@ -1,4 +1,6 @@
-public abstract class Building {
+import interfaces.ISell;
+
+public abstract class Building implements ISell {
     private int numberOfRooms;
     private String dateOfConstruction;
     private int numberOfFloors;
@@ -37,6 +39,10 @@ public abstract class Building {
     }
     public void setNeedRepairs(boolean needRepairs) {
         this.needRepairs = needRepairs;
+    }
+
+    public double calculateProfit(double costPerMonth){
+        return this.rentPerMonth - costPerMonth;
     }
 }
 
