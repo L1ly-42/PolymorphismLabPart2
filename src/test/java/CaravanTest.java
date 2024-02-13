@@ -1,3 +1,4 @@
+import org.assertj.core.api.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -48,6 +49,12 @@ public class CaravanTest {
     public void canSetNeedRepairs(){
         rv.setNeedRepairs(true);
         assertThat(rv.getNeedRepairs()).isEqualTo(true);
+    }
+
+    @Test
+    public void canCalculateProfit(){
+        double profit = rv.calculateProfit(300);
+        assertThat(profit).isEqualTo(500);
     }
 
 

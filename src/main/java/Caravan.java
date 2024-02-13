@@ -1,4 +1,6 @@
-public class Caravan {
+import interfaces.ISell;
+
+public class Caravan implements ISell {
     private String dateOfManufacture;
     private int numberOfWheels;
     private double rentPerSeason;
@@ -37,5 +39,9 @@ public class Caravan {
 
     public void setNeedRepairs(boolean needRepairs) {
         this.needRepairs = needRepairs;
+    }
+
+    public double calculateProfit(double costPerSeason){
+        return this.rentPerSeason - costPerSeason;
     }
 }
