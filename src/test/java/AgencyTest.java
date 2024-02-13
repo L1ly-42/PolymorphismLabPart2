@@ -8,8 +8,8 @@ public class AgencyTest {
     private Agency agency;
     private Commercial bakery;
     private Residential cottage;
-
     private Commercial restaurant;
+    private Caravan rv;
 
     @BeforeEach
     public void setUp() {
@@ -22,6 +22,8 @@ public class AgencyTest {
                 "23/07/2000", 400);
         restaurant = new Commercial("Rudy's Pizza","pizzeria",1,
                 1,"27/12/2023",1500);
+
+        rv = new Caravan("21/11/2007",800);
     }
 
     @Test
@@ -30,23 +32,25 @@ public class AgencyTest {
     }
 
     @Test
-    public void canGetBuildings(){
-        assertThat(agency.getBuildings().size()).isEqualTo(0);
+    public void canGetProperties(){
+        assertThat(agency.getProperties().size()).isEqualTo(0);
     }
 
     @Test
-    public void canAddBuildings(){
-        agency.addBuilding(bakery);
-        assertThat(agency.getBuildings().size()).isEqualTo(1);
+    public void canAddProperties(){
+        agency.addProperty(bakery);
+        agency.addProperty(rv);
+        assertThat(agency.getProperties().size()).isEqualTo(2);
     }
 
     @Test
-    public void canRemoveBuildings(){
-        agency.addBuilding(bakery);
-        agency.addBuilding(cottage);
-        agency.addBuilding(restaurant);
-        agency.removeBuilding(cottage);
-        assertThat(agency.getBuildings().size()).isEqualTo(2);
+    public void canRemoveProperties(){
+        agency.addProperty(bakery);
+        agency.addProperty(cottage);
+        agency.addProperty(rv);
+        agency.addProperty(restaurant);
+        agency.removeProperty(cottage);
+        assertThat(agency.getProperties().size()).isEqualTo(3);
     }
 
 }

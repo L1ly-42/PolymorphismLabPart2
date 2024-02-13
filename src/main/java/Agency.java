@@ -1,29 +1,31 @@
+import interfaces.ISell;
+
 import java.util.ArrayList;
 
 public class Agency {
 
     private String name;
-    private ArrayList<Building> buildings;
+    private ArrayList<ISell> properties;
 
     public Agency(String name){
         this.name = name;
-        this.buildings = new ArrayList<>();
+        this.properties = new ArrayList<>();
     }
 
     public String getName(){
         return this.name;
     }
 
-    public ArrayList<Building> getBuildings(){
-        return this.buildings;
+    public ArrayList<ISell> getProperties(){
+        return this.properties;
     }
 
-    public void addBuilding(Building building){
-        this.buildings.add(building);
+    public void addProperty(ISell property){
+        this.properties.add(property);
     }
 
-    public void removeBuilding(Building building){
-        this.buildings.remove(building);
+    public void removeProperty(Building building){
+        this.properties.remove(building);
     }
 
 }
