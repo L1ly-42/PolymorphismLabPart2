@@ -30,14 +30,14 @@ public class CaravanTest {
     }
 
     @Test
-    public void canGetRentPerSeason(){
-        assertThat(rv.getRentPerSeason()).isEqualTo(800);
+    public void canGetRentPerMonth(){
+        assertThat(rv.getRentPerMonth()).isEqualTo(800);
     }
 
     @Test
     public void canSetRentPerSeason(){
-        rv.setRentPerSeason(10);
-        assertThat(rv.getRentPerSeason()).isEqualTo(10);
+        rv.setRentPerMonth(10);
+        assertThat(rv.getRentPerMonth()).isEqualTo(10);
     }
 
     @Test

@@ -3,12 +3,12 @@ import interfaces.ISell;
 public class Caravan implements ISell {
     private String dateOfManufacture;
     private int numberOfWheels;
-    private double rentPerSeason;
+    private double rentPerMonth;
     private boolean needRepairs;
 
-    public Caravan(String dateOfManufacture, double rentPerSeason){
+    public Caravan(String dateOfManufacture, double rentPerMonth){
         this.dateOfManufacture = dateOfManufacture;
-        this.rentPerSeason = rentPerSeason;
+        this.rentPerMonth = rentPerMonth;
         this.numberOfWheels = 2;
         this.needRepairs = false;
     }
@@ -25,12 +25,12 @@ public class Caravan implements ISell {
         this.numberOfWheels = wheels;
     }
 
-    public double getRentPerSeason() {
-        return this.rentPerSeason;
+    public double getRentPerMonth() {
+        return this.rentPerMonth;
     }
 
-    public void setRentPerSeason(double rent) {
-        this.rentPerSeason = rent;
+    public void setRentPerMonth(double rent) {
+        this.rentPerMonth = rent;
     }
 
     public boolean getNeedRepairs() {
@@ -41,7 +41,7 @@ public class Caravan implements ISell {
         this.needRepairs = needRepairs;
     }
 
-    public double calculateProfit(double costPerSeason){
-        return this.rentPerSeason - costPerSeason;
+    public double calculateProfit(double costPerMonth){
+        return this.rentPerMonth - costPerMonth;
     }
 }
