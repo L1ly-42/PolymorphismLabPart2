@@ -23,7 +23,7 @@ public class AgencyTest {
         restaurant = new Commercial("Rudy's Pizza","pizzeria",1,
                 1,"27/12/2023",1500);
 
-        rv = new Caravan("21/11/2007",800);
+        rv = new Caravan("21/11/2007",800,300);
     }
 
     @Test

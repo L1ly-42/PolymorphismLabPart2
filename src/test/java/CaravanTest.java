@@ -10,7 +10,7 @@ public class CaravanTest {
 
     @BeforeEach
     public void setUp(){
-        rv = new Caravan("21/11/2007",800);
+        rv = new Caravan("21/11/2007",800,300);
     }
 
     @Test
@@ -49,6 +49,17 @@ public class CaravanTest {
     public void canSetNeedRepairs(){
         rv.setNeedRepairs(true);
         assertThat(rv.getNeedRepairs()).isEqualTo(true);
+    }
+
+    @Test
+    public void canGetMaintenanceCost(){
+        assertThat(rv.getMaintenanceCost()).isEqualTo(300);
+    }
+
+    @Test
+    public void canSetMaintenanceCost(){
+        rv.setMaintenanceCost(400);
+        assertThat(rv.getMaintenanceCost()).isEqualTo(400);
     }
 
     @Test
