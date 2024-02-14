@@ -64,7 +64,7 @@ public class CaravanTest {
 
     @Test
     public void canCalculateProfit(){
-        double profit = rv.calculateProfit(300);
+        double profit = rv.calculateProfit();
         assertThat(profit).isEqualTo(500);
     }
 

@@ -50,7 +50,7 @@ public class Caravan implements ISell {
         this.maintenanceCost = maintenanceCost;
     }
 
-    public double calculateProfit(double costPerMonth){
-        return this.rentPerMonth - costPerMonth;
+    public double calculateProfit(){
+        return this.rentPerMonth - this.maintenanceCost;
     }
 }
