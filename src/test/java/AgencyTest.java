@@ -53,21 +53,21 @@ public class AgencyTest {
         assertThat(agency.getProperties().size()).isEqualTo(3);
     }
 
-    @Test
-    public void canCalculateTaxOfSingleProperty(){
-        double tax = agency.calculateTax(restaurant,500);
-        assertThat(tax).isEqualTo(3000);
-    }
-
-    @Test
-    public void canCalculateTotalTaxOfAllProperties(){
-        agency.addProperty(bakery);
-        agency.addProperty(cottage);
-        agency.addProperty(rv);
-        agency.addProperty(restaurant);
-
-        double totalTax = agency.calculateTax(agency.getProperties(),4400);
-        assertThat(totalTax).isEqualTo(10000);
-    }
+//    @Test
+//    public void canCalculateTaxOfSingleProperty(){
+//        double tax = agency.calculateTax(restaurant,500);
+//        assertThat(tax).isEqualTo(3000);
+//    }
+//
+//    @Test
+//    public void canCalculateTotalTaxOfAllProperties(){
+//        agency.addProperty(bakery);
+//        agency.addProperty(cottage);
+//        agency.addProperty(rv);
+//        agency.addProperty(restaurant);
+//
+//        double totalTax = agency.calculateTax(agency.getProperties(),4400);
+//        assertThat(totalTax).isEqualTo(10000);
+//    }
 
 }

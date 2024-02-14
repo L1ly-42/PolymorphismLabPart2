@@ -28,20 +28,20 @@ public class Agency {
         this.properties.remove(property);
     }
 
-    public double calculateTax(ISell singleProperty, double cost) {
-        double profitPerMonth = singleProperty.calculateProfit(cost);
-        double yearProfit = profitPerMonth * 12;
-        return yearProfit * 0.25;
-    }
-    public double calculateTax(ArrayList<ISell> allProperties, double yearlyCost) {
-        double profitPerMonth = 0;
-        double costPerMonth = yearlyCost/12;
-        for(ISell property: allProperties){
-            profitPerMonth += property.calculateProfit(costPerMonth/allProperties.size());
-        }
-        double profitPerYear = profitPerMonth * 12;
-        return profitPerYear * 0.25;
-
-    }
+//    public double calculateTax(ISell singleProperty, double cost) {
+//        double profitPerMonth = singleProperty.calculateProfit(cost);
+//        double yearProfit = profitPerMonth * 12;
+//        return yearProfit * 0.25;
+//    }
+//    public double calculateTax(ArrayList<ISell> allProperties, double yearlyCost) {
+//        double profitPerMonth = 0;
+//        double costPerMonth = yearlyCost/12;
+//        for(ISell property: allProperties){
+//            profitPerMonth += property.calculateProfit(costPerMonth/allProperties.size());
+//        }
+//        double profitPerYear = profitPerMonth * 12;
+//        return profitPerYear * 0.25;
+//
+//    }
 
 }

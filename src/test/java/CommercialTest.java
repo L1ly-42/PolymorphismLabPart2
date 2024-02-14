@@ -74,7 +74,7 @@ public class CommercialTest {
     @Test
     public void canSetMaintenanceCost() {
         bakery.setMaintenanceCost(800);
-        assertThat(bakery.getRentPerMonth()).isEqualTo(800);
+        assertThat(bakery.getMaintenanceCost()).isEqualTo(800);
     }
 
 
