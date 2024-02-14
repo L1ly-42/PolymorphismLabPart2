@@ -6,9 +6,9 @@ public class Residential extends Building {
 
     public Residential(String houseType, int numberOfTenants,
                        int numberOfRooms, int numberOfFloors, String dateOfConstruction,
-                       double rentPerMonth){
+                       double rentPerMonth, double maintenanceCost){
 
-        super(numberOfRooms,numberOfFloors,dateOfConstruction,rentPerMonth);
+        super(numberOfRooms,numberOfFloors,dateOfConstruction,rentPerMonth, maintenanceCost);
         this.houseType = houseType;
         this.numberOfTenants = numberOfTenants;
         this.numberOfComplaints = 0;

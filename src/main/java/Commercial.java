@@ -3,8 +3,9 @@ public class Commercial extends Building {
     private String companyName;
     private String businessType;
 
-    public Commercial(String companyName,String businessType, int numberOfRooms, int numberOfFloors, String dateOfConstruction, double rentPerMonth){
-        super(numberOfRooms, numberOfFloors, dateOfConstruction, rentPerMonth);
+    public Commercial(String companyName,String businessType, int numberOfRooms, int numberOfFloors, String dateOfConstruction,
+                      double rentPerMonth, double maintenanceCost){
+        super(numberOfRooms, numberOfFloors, dateOfConstruction, rentPerMonth, maintenanceCost);
         this.companyName = companyName;
         this.businessType = businessType;
     }

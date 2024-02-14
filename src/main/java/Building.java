@@ -6,12 +6,14 @@ public abstract class Building implements ISell {
     private int numberOfFloors;
     private double rentPerMonth;
     private boolean needRepairs;
+    private double maintenanceCost;
 
-    public Building(int numberOfRooms, int numberOfFloors, String dateOfConstruction, double rentPerMonth) {
+    public Building(int numberOfRooms, int numberOfFloors, String dateOfConstruction, double rentPerMonth, double maintenanceCost) {
         this.numberOfRooms = numberOfRooms;
         this.numberOfFloors = numberOfFloors;
         this.dateOfConstruction = dateOfConstruction;
         this.rentPerMonth = rentPerMonth;
+        this.maintenanceCost = maintenanceCost;
         this.needRepairs = false;
 
     }
@@ -39,6 +41,14 @@ public abstract class Building implements ISell {
     }
     public void setNeedRepairs(boolean needRepairs) {
         this.needRepairs = needRepairs;
+    }
+
+    public double getMaintenanceCost() {
+        return this.maintenanceCost;
+    }
+
+    public void setMaintenanceCost(double maintenanceCost) {
+        this.maintenanceCost = maintenanceCost;
     }
 
     public double calculateProfit(double costPerMonth){
