@@ -48,8 +48,8 @@ public class ResidentialTest {
 
     @Test
     public void canCalculateProfit(){
-        double profit = cottage.calculateProfit(200);
-        assertThat(profit).isEqualTo(200);
+        double profit = cottage.calculateProfit();
+        assertThat(profit).isEqualTo(300);
     }
 }
 
