@@ -10,7 +10,7 @@ public class CommercialTest {
     @BeforeEach
     public void setUp(){
         bakery = new Commercial("Doughnotts","bakery",2,
-                                2,"04/07/2015",1000);
+                                2,"04/07/2015",1000,500);
     }
 
  // A set of tests specific to Commercial subclass
@@ -39,7 +39,6 @@ public class CommercialTest {
 
 // A set of tests to test the Building parent class
 
-
     @Test
     public void canGetNumberOfRooms(){
         assertThat(bakery.getNumberOfRooms()).isEqualTo(2);
@@ -66,6 +65,18 @@ public class CommercialTest {
         bakery.setRentPerMonth(1200);
         assertThat(bakery.getRentPerMonth()).isEqualTo(1200);
     }
+
+    @Test
+    public void canGetMaintenanceCost(){
+        assertThat(bakery.getMaintenanceCost()).isEqualTo(500);
+    }
+
+    @Test
+    public void canSetMaintenanceCost() {
+        bakery.setMaintenanceCost(800);
+        assertThat(bakery.getRentPerMonth()).isEqualTo(800);
+    }
+
 
     @Test
     public void canGetNeedRepairs(){
