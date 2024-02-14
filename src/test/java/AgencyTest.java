@@ -16,12 +16,12 @@ public class AgencyTest {
         agency = new Agency("BNTA Agency");
 
         bakery = new Commercial("Doughnotts","bakery",2,
-                2,"04/07/2015",1000);
+                2,"04/07/2015",1000,500);
 
         cottage = new Residential("cottage", 4, 6, 2,
-                "23/07/2000", 400);
+                "23/07/2000", 400,100);
         restaurant = new Commercial("Rudy's Pizza","pizzeria",1,
-                1,"27/12/2023",1500);
+                1,"27/12/2023",1500,300);
 
         rv = new Caravan("21/11/2007",800,300);
     }

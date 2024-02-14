@@ -10,7 +10,7 @@ public class ResidentialTest {
     @BeforeEach
     public void setUp() {
         cottage = new Residential("cottage", 4, 6, 2,
-                "23/07/2000", 400);
+                "23/07/2000", 400,100);
     }
 
     @Test
